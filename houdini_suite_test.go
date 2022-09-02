@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"os"
 
+	"github.com/dtimm/houdini"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/vito/houdini"
 
 	"testing"
 )

@@ -1,15 +1,16 @@
 package ptyutil
 
 import (
+	"os"
+
 	"github.com/pkg/term/termios"
 	"golang.org/x/sys/unix"
-	"os"
 )
 
 func SetRaw(tty *os.File) error {
 	var attr unix.Termios
 
-	err := termios.Tcgetattr(tty.Fd(), &attr)
+	_, err := termios.Tcgetattr(tty.Fd())
 	if err != nil {
 		return err
 	}

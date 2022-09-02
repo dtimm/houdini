@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package process
@@ -9,7 +10,7 @@ import (
 	"syscall"
 
 	"code.cloudfoundry.org/garden"
-	"github.com/vito/houdini/ptyutil"
+	"github.com/dtimm/houdini/ptyutil"
 	"github.com/pkg/term/termios"
 )
 
